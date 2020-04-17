@@ -35,11 +35,8 @@ public class HW2_2 {
                     case 7:
                         System.out.println("Воскресенье");
                         break;
-                    case 8:
-                    case 9:
-                        System.out.println("Такого дня нет");
-                        break;
                     default:
+                        System.out.println("Это не день недели");
                         break;
                 }
             } else {

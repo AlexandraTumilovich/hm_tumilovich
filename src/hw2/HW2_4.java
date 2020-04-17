@@ -24,14 +24,12 @@ public class HW2_4 {
             System.out.print(value + " ");
         }
         System.out.println("\nCумма отрицательных элементов вектора: " + getSum(myArray));
-        System.out.println("Произведение элементов массива,  расположенных между максимальным и минимальным элементами: " + getproduct(myArray));
-
+        System.out.println("Произведение элементов массива,  расположенных между максимальным и минимальным элементами: " + getProduct(myArray));
     }
 
     public static void getNumber() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите количество элементов в массиве (не более 20)");
-
         if (scanner.hasNextInt()) {
             int number = scanner.nextInt();
             if (number <= 20 && number > 0) {
@@ -40,7 +38,6 @@ public class HW2_4 {
                 System.out.println("Вы ввели неверное число");
                 getNumber();
             }
-
         } else {
             System.out.println("Вы ввели неверное число");
             getNumber();
@@ -55,7 +52,7 @@ public class HW2_4 {
         return negElemSum;
     }
 
-    public static long getproduct(int[] someArray) {
+    public static long getProduct(int[] someArray) {
         int minNumber = someArray[0]; //Минимальное число в массиве
         int minIndex = 0;//Индекс минимального числа в массиве
         int maxNumber = someArray[0];// Максимальное число в массиве
@@ -89,7 +86,6 @@ public class HW2_4 {
             } else {
                 productMinMax = 0; // макс и мин элементы стоят рядом и между ними других элементов нет
             }
-
         }
         return productMinMax;
     }
