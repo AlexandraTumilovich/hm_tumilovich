@@ -59,8 +59,7 @@ public class Student {
 
     public static void printStudents(ArrayList<Student> students, int course) { // получает список студентов и номер курса и печатает в консоль имена тех студентов из списка, которые обучаются на данном курсе
         System.out.println("Студенты, учащиеся на курсе " + course + ":");
-        for (Student student : students
-        ) {
+        for (Student student : students) {
             if (student.getCourse() == course) System.out.println(student.getName() + " " + student.getSurname());
         }
         System.out.println();
