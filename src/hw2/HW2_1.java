@@ -23,7 +23,5 @@ public class HW2_1 {
         } else {
             System.out.printf("Круг с радиусом %d НЕ 2закрывает прямоугольник cо сторонами %d и %d", r, a, b);
         }
-
     }
-
 }
