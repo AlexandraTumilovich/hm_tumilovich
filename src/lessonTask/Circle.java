@@ -10,7 +10,7 @@ public class Circle extends Shape {
     @Override
     protected double square() throws ShapeIncorrectException {
         if (radius > 0) {
-            return (Math.PI)*radius*radius;
+            return (Math.PI) * radius * radius;
         } else {
             throw new ShapeIncorrectException("Not a circle");
         }
