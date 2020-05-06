@@ -1,6 +1,6 @@
 package hw4.task1;
 
-public interface iAction {
+public interface IAction {
     void sound();
 
     void move();

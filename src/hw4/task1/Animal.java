@@ -1,6 +1,6 @@
 package hw4.task1;
 
-public abstract class Animal implements iAction {
+public abstract class Animal implements IAction {
     protected String name; // кличка
     protected int age; // возраст
     protected Feeding feeding; // тип питания (плотоядный, травоядный, всеядный)
