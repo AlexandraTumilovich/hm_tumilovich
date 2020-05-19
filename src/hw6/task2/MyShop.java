@@ -44,16 +44,14 @@ public class MyShop {
         printProducts();
         while (true) {
             int menuItem = getMenuItem();
-            if (menuItem > 0){
-                int menuItemQuantity = getMenuItemQuantity();
-                if (menuItemQuantity > 0){
-                    selectedProducts.put(productList.get(menuItem-1), menuItemQuantity);
-                } else {
-                    break;
-                }
-            } else {
+            if (menuItem <= 0) {
                 break;
             }
+            int menuItemQuantity = getMenuItemQuantity();
+            if (menuItemQuantity <=0) {
+                break;
+            }
+            selectedProducts.put(productList.get(menuItem-1), menuItemQuantity);
         }
         if (selectedProducts.size()==0){
             System.out.println("товары не выбраны");
@@ -70,7 +68,7 @@ public class MyShop {
             if (menuItem > 0 && menuItem < products.size() + 1) {
                 return menuItem;
             } else {
-                System.out.println("Вы ввели неправильное число.");
+                System.out.println("Вы ввели неправильное число " + menuItem + ".");
                 return getMenuItem();
             }
         } else {
@@ -87,14 +85,13 @@ public class MyShop {
             if (itemQuantity > 0 && itemQuantity <= 50) {
                 return itemQuantity;
             } else {
-                System.out.println("Вы ввели неправильное значение " + scanner.next() + ". Оформите заказ заново.");
-                addPersonInQueue();
+                System.out.println("Вы ввели неправильное значение " + itemQuantity + ".");
+                return getMenuItemQuantity();
             }
         } else {
-            System.out.println("Вы ввели неправильное значение " + scanner.next() + ". Оформите заказ заново.");
-            addPersonInQueue();
+            System.out.println("Вы ввели неправильное значение " + scanner.next() + ".");
+            return getMenuItemQuantity();
         }
-        return itemQuantity;
     }
 
     public void countMoney(Person person) {
